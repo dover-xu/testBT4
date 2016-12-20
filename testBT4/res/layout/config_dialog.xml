@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+  	<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"       
+        android:orientation="horizontal" >
+		<TextView 
+         	android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="船速比例系数"
+            android:textSize="15sp"/>
+        <EditText
+            android:id="@+id/kt500_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"            
+            android:typeface="normal" 
+            android:inputType="number"
+            android:hint="用于计算500米时间"
+            android:textSize="15sp"
+            android:layout_margin="5dp">            
+        </EditText>
+    </LinearLayout>
+  
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"       
+        android:orientation="horizontal" >
+		<TextView 
+         	android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="阻力等级"
+            android:textSize="15sp"/>
+        <EditText
+            android:id="@+id/level_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"            
+            android:typeface="normal" 
+            android:inputType="number"
+            android:hint="用于修改阻力等级"
+            android:textSize="15sp"
+            android:layout_margin="5dp">            
+        </EditText>
+    </LinearLayout>
+ 
+</LinearLayout>

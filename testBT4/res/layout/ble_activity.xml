@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clickable="true"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="状态："            
+            android:layout_margin="5dp"/>
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"             
+            android:id="@+id/connect_state"
+            android:layout_margin="5dp"/>
+        <TextView 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"  
+            android:gravity="right"
+            android:text="0"            
+            android:id="@+id/battery_tv"
+            android:layout_margin="5dp"/>     
+                 
+    </LinearLayout>
+
+    
+  	<LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#FFFFFF">
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"                        
+                android:text="是否使用中"
+                android:textSize="15sp"/>
+            <TextView 
+                android:id="@+id/use_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_margin="5dp"
+                android:text="否"
+                android:textSize="15sp"/>
+      	</LinearLayout>
+      	
+      	
+         <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#DCDCDC">
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="500米时间"
+                android:textSize="15sp"/>
+            <TextView 
+                android:id="@+id/speed_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_margin="5dp"
+                android:text="00:00"
+                android:textSize="15sp"/>
+          </LinearLayout>
+          <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#FFFFFF">
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="阻力等级"
+                android:textSize="15sp"/>
+            <TextView 
+                android:id="@+id/level_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_margin="5dp"
+                android:text="0"
+                android:textSize="15sp"/>
+ 		</LinearLayout>
+ 		
+      	<LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#FFFFFF"> 
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="桨频"
+                android:textSize="15sp"/>
+            <TextView 
+                android:id="@+id/countmin_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_margin="5dp"
+                android:text="0"
+                android:textSize="15sp"/>
+         </LinearLayout>
+                           
+    </LinearLayout>
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_margin="5dp">       
+	    <Button
+            android:id="@+id/clear_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Clear"
+            android:textSize="10sp"
+            android:layout_margin="5dp" />
+	    <Button
+            android:id="@+id/data1_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Stop"
+            android:textSize="10sp"
+            android:layout_margin="5dp" />	 
+      
+      	<Button
+            android:id="@+id/config_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Config"
+            android:textSize="10sp"
+            android:layout_margin="5dp" />	           	    	    
+	</LinearLayout>
+	        
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"        
+        android:layout_margin="5dp"
+        android:gravity="center"          
+        android:text="接收区："
+        android:textSize="15sp" />
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:id="@+id/rev_sv"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/rev_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+           	android:background="@drawable/textview_border"             
+            android:textSize="15sp" />        
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"       
+        android:orientation="horizontal" >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/send_et"
+            android:typeface="normal" 
+            android:hint="输入命令"
+            android:layout_margin="5dp">            
+        </EditText>
+
+        <Button
+            android:id="@+id/send_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="发送"
+            android:textSize="15sp"
+            android:layout_margin="5dp" />
+
+    </LinearLayout>
+     
+</LinearLayout>
